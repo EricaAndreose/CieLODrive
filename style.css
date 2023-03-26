@@ -1,0 +1,286 @@
+.body {
+	background-color: rgb(0, 0, 0);
+}
+
+#background {
+	background-image: url("immagini/Hollywood.jpg");
+	background-attachment: fixed; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+}
+
+#space {
+  padding: 12%;
+}
+
+#title-01 {
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+.navbar-brand {
+	font-family: 'EB Garamond', serif;
+	font-size: 20px;
+	text-shadow: 2px 2px 5px black;
+}
+
+.titolo2 {
+	color: white;
+	text-align: center;
+}
+
+.text {
+	color: white;
+} 
+
+#collapseLeggidipiù {
+text-align: left;
+}
+
+#prospect {
+	background-color: yellow;
+
+}
+
+.btn { 
+	position: center;
+}
+
+#bottone {
+	background-color: white;
+	border-color: black;
+	color: black;
+	border-radius: 9px;
+	transition-duration: 0.4s;
+	font-family:Tangerine;
+	font-size: 25px;
+}
+
+#bottone:hover {
+  background-color: black;
+  color: white;
+}
+
+#testocollapse {
+	color: white;
+	position: left;
+}
+
+#imgcarousel {
+	height: 400px;
+  width: 800px;
+}
+
+#box {
+	background: rgba(112, 64, 24); /*sfondo marroncino con trasparenza sopra le foto del carousel */
+  opacity: 0.8;
+	border-color: black;
+	border-radius: 9px;
+	color: white;
+	height: 100px;
+  width: 500px;
+  display: inline-block;
+	}
+
+#textcar {
+font-size: 15px;
+}
+
+.nero {
+background: black;
+}
+
+.backbiblio {
+background: rgb(112, 64, 24);
+}
+
+.titolocard1 {
+	color: white;
+	text-align: center;
+}
+
+.cardrossa {  
+  background-color:rgb(112, 64, 24) ;
+	margin-left: 30px; /*margini delle card per farle respirare*/
+	margin-right: 30px;
+	max-width: 1000px;
+}
+
+.cardok {  /*margini delle card per farle respirare*/
+	margin-left: 30px;
+	margin-right: 30px;
+	max-height: 800px;
+}
+
+.form-group { 
+	color: white;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h5 {
+  float: none;
+}
+
+
+/*pagina catalogo miniature*/
+
+#dark {
+  background-color: black;
+}
+
+
+/*ombra delle card*/
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 5px 10px 0 black;
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 15px 25px 0 black;
+}
+
+
+
+/* Month header */
+.month {
+  padding: 25px 25px;
+  width: 100%;
+  background: black;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2,8px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 1px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 11%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 11%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: black;
+  color: white !important
+}
+
+/*pulsanti pagine item miniatura*/
+.page-link:active {
+  background-color: white;
+  color: black;
+}
+
+.page-link:hover {
+  background-color: white;
+  color: black;
+}
+
+/*lista metadati*/
+
+.list-group-item {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.list-group-item span {
+  display: inline-block;
+  width: 250px;
+  font-weight: bold;
+}
+
+#trasparenza {
+  position: absolute; /* Position the background text */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+}
+
+
+#sound {
+  position: center; /* Position the background text */
+  background: rgb(0, 0, 0); /* Fallback color */
+  color: yellow;
+  font-family: Tangerine;
+  font-size: 35px;
+}
+
+#wellsee {
+  background: rgb(0, 0, 0); /* Fallback color */
+}
