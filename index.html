@@ -6,23 +6,15 @@
 
     <meta name="DC.Title" content="CieLODrive">
     <meta name="DC.Creator" content="Erica Andreose">
-    <meta name="DC.Subject" content="digital collection">
-    <meta name="DC.Subject" content="markup language">
-    <meta name="DC.Subject" content="XML-TEI">
-    <meta name="DC.Subject" schema="UDC" content="Scholarly editing and digital textuality">
-    <meta name="DC.Subject" schema="BNCF" content="Letters">
-    <meta name="DC.Subject" schema="BNCF" content="Mail">
-    <meta name="DC.Description" content="Project of SEDT for the analysis of the letters by Arthur Conan Doyle during the Boer War">
-    <meta name="DC.Publisher" content="Alma mater studiorum, Universita di Bologna, Digital Humanities and Digital Technologies">
+    <meta name="DC.Description" content="LODLAM project ">
+    <meta name="DC.Publisher" content="Alma mater studiorum, Universita di Bologna, Digital Humanities and Digital Knowledge">
     <meta name="DC.Contributor" content="Erica Andreose">
-    <meta name="DC.Date" content="2022-12-12">
+    <meta name="DC.Date" content="2023-03-27">
     <meta name="DC.Type" content="Website">
-    <meta name="DC.Format" content="HTML/CSS/JS/XML-TEI">
+    <meta name="DC.Format" content="HTML/CSS/JS">
     <meta name="DC.Identifier" content="https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/"> <!--add website URL-->
     <meta name="DC.Source" content="https://www.arthur-conan-doyle.com/index.php?title=Main_Page">
-    <meta name="DC.Language" content="it">
-    <meta name="DC.Relation" content="https://www.arthur-conan-doyle.com/index.php?title=Main_Page">
-    <meta name="DC.Rights" content="https://conandoyleestate.com/">
+    <meta name="DC.Language" content="eng">
 
     <!--CSS of Bootstrap-->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -36,7 +28,8 @@
     <link rel="icon" href="favicon.jpg" type="immagini/jpg"/>
     <!--link font google-->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
-    
+    <!--link bootstrap javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <title>CieLODrive</title>
   </head>
@@ -44,39 +37,35 @@
   <body class="body">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#"><h1 id="su"> CieLODrive</h1></a>
+        <a class="navbar-brand" href="#"><h1 id="su"> Cie<span style="color: rgb(255, 213, 0);;">LOD</span>rive</h1></a>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#domain">The Domain <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Author
+              Knowledge Organisation
               </a>
               <div class="dropdown-menu bg-dark text-white" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item bg-dark text-white" href="#">Conceptual Map</a>
                 <a class="dropdown-item bg-dark text-white" href="#">E/R Model</a>
+                <a class="dropdown-item bg-dark text-white" href="#">E/R Model Enhance</a>
+                <a class="dropdown-item bg-dark text-white" href="#">Conceptual Model</a>
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="letters.html">
-                Metadata Analysis
-              </a>
-            </li>
-            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Theoretical Model
+                Knowledge Representation
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">|</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html" tabindex="-1" aria-disabled="true">Conceptual Model</a>
+              <div class="dropdown-menu bg-dark text-white" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item bg-dark text-white" href="#">CSV</a>
+                <a class="dropdown-item bg-dark text-white" href="#">RDF production</a>
+                <a class="dropdown-item bg-dark text-white" href="#">RDF visualization</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -91,8 +80,8 @@
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-10">
-            <h1 id="title-01">CieLODrive</h1>
-            <p class="titolo2">A linked open data project</p>
+            <h1 id="title-01">Cie<span style="color: rgb(255, 213, 0);;">LOD</span>rive</h1>
+            <p id="items" style="font-size: 23px;">A linked open data project</p>
           </div>
           <div class="col-md-1"></div>
         </div>
@@ -100,20 +89,20 @@
         <br>
       </div>
      
-    
-    
 
-      <div class="backbiblio container-fluid">
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <h1 class="titolo2">The Author</h1>
-            <p class="text">Sir Arthur Ignatius Conan Doyle KStJ DL (22 May 1859 - 7 July 1930) was a British writer and physician. He created the character Sherlock Holmes in 1887 for A Study in Scarlet, the first of four novels and fifty-six short stories about Holmes and Dr. Watson. The Sherlock Holmes stories are milestones in the field of crime fiction.</p>
-            <button type="button" class="btn btn-outline-dark btn-sm" id="bottone">Learn More</button>
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">The Domain</h1>
+              <p class="text">Why did we choose it? and bla bla bla bla</p>
+            </div>
+            <div class="col-md-1"></div>
           </div>
-          <div class="col-md-1"></div>
+          <br>
         </div>
-        <br>
       </div>
     </section>   
 
@@ -122,9 +111,1906 @@
       <div class="container-fluid">
         <br>
         <br>
-        <br>
+      </div> 
+
+      <div class="container-fluid">
+        <div class="col-md-1"></div>
+        
+          <h1 id="items">The Items</h1>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded" data-toggle="modal" data-target="#exampleModalCenter">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-book"></i> Book</h5>
+                  <p class="card-text">Explore the items chosen for describing the domain</p> 
+                </div>
+                <img src="immagini/book.jpg" class="d-block w-100" alt="book" style="width: 25%; height: 75%;">
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: white;">Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex">
+                      <img src="immagini/bookbig.jpg" alt="book" style="width:200px;height:300px;">
+                      <div class="flex-column ml-3">
+                        <ul>
+                          <li>Title: Helter Skelter</li>
+                          <li>Authors: vipbvàpireva</li>
+                          <li>Publisher: vipbvàpireva</li>
+                          <li>Source: idwoavànoc</li>
+                          <br>
+                          <br>
+                          <a href="https://opac.sbn.it/risultati-ricerca-avanzata/-/opac-adv/detail/LIG0080585?" target="_blank"><button type="button" class="btn btn-dark">Go to Opac SBN</button></a>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark" data-toggle="modal" data-target="#exampleModalCenters">
+                  <h5 class="card-title"><i class="bi bi-tv"></i> TV Episode</h5>
+                  <p class="card-text">Photos from the Boer War blahdfubeòwoivhevinp</p>
+                </div>
+                <img src="immagini/tvepisode.jpg" class="d-block w-100" alt="..." style="width: 25%; height: 75%;">
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: white;">TV Episode</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex">
+                      <div><iframe width="290" height="170" src="https://www.imdb.com/video/vi971881497/?playlistId=tt6710720?ref_=ext_shr_lnk" allowfullscreen></iframe></div>
+                      <div class="row">
+                        <ul>
+                          <li>Title: Helter Skelter</li>
+                          <li>Authors: vipbvàpireva</li>
+                          <li>Publisher: vipbvàpireva</li>
+                          <li>Source: idwoavànoc</li>
+                          <br>
+                          <br>
+                          <button type="button" class="btn btn-dark">Go to source</button>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-paperclip"></i> Trial Transcription</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/transcription.png" class="d-block w-100" alt="..."> 
+              </div>
+            </div>
+          
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-camera"></i> Trial Transcription Photo</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/phototrial.jpg" class="d-block w-100" alt="..."> 
+              </div>
+            </div>
+          </div>
+
+          <br>
+        
+          <div class="row">
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-music-note-beamed"></i> Song</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/song.jpg" class="d-block w-100" alt="...">
+              </div> 
+            </div>
+
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-film"></i> Movie</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/movie.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-newspaper"></i> Article</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/article1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-camera"></i> Photo</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/photo.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+            <br>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-camera-reels"></i> Video</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/video.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-newspaper"></i> Article</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/article2.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="cardok bg-light rounded">
+                <div class="card-body text-dark">
+                  <h5 class="card-title"><i class="bi bi-pencil"></i> Drawing</h5>
+                  <p class="card-text">Explore the sending locations of the letters</p>
+                </div>
+                <img src="immagini/drawing.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-1"></div>
+          <br>
+        
+      </div>
+      <br>
+      <br>
+
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">Knowledge Organisation</h1>
+              <br>
+              <h2 id="tit2">Conceptual Map</h2>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <div class="iframe-container"><iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbgOjnE=/?moveToViewport=-4631,-1385,7022,4001&embedId=121886091115" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe></div>
+              <p style="color: white; text-align: center; padding: 1%;"><i class="bi bi-box-arrow-down"></i> Click and download the image of the graph <i class="bi bi-box-arrow-down"></i></p>
+              <a href="immagini/1conceptmap.jpg" download>
+                <img class="graph" src="immagini/1conceptmap.jpg" alt="conceptual map" width="45%">
+              </a>
+              <br>
+              <h2 id="tit2">E/R Model</h2>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <div class="iframe-container"><iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbhdXPk=/?moveToViewport=-1698,-703,2737,1467&embedId=288587490901" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe></div>
+              <p style="color: white; text-align: center; padding: 1%;"><i class="bi bi-box-arrow-down"></i> Click and download the image of the graph <i class="bi bi-box-arrow-down"></i></p>
+              <a href="immagini/1conceptmap.jpg" download>
+                <img class="graph" src="immagini/1conceptmap.jpg" alt="conceptual map" width="45%">
+              </a>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <br>
+        </div>
       </div>
 
+      <br>
+      <br>
+      <br>
+
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">Metadata Analysis and Alignment</h1>
+              <br>
+              <h2 id="tit2">Metadata Analysis</h2>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <table class="table table-responsive table-dark table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col" style="color: rgb(255, 213, 0);">Index</th>
+                    <th scope="col" style="color: rgb(255, 213, 0);">Item</th>
+                    <th scope="col" style="color: rgb(255, 213, 0);">Title</th>
+                    <th scope="col" style="color: rgb(255, 213, 0);">Provider</th>
+                    <th scope="col" style="color: rgb(255, 213, 0);">Provider Metadata Standard</th>
+                    <th scope="col" style="color: rgb(255, 213, 0);">Chosen Metadata Standard</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Book</td>
+                    <td>"Helter Skelter : the true<br>
+                      story of Manson murders"</td>
+                    <td>ISBD</td>
+                    <td>ISBD</td>
+                    <td>ISBD</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>TV Episode</td>
+                    <td>"Charles(Manson) in charge"</td>
+                    <td>IMDb</td>
+                    <td>/</td>
+                    <td>schema.org</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Trial Transcription</td>
+                    <td>"Tate - La Bianca<br>
+                      Trial Transcription"</td>
+                    <td>CieloDrive.org</td>
+                    <td>/</td>
+                    <td>Marc21</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Photo</td>
+                    <td>"Tate Trial Transcripts"</td>
+                    <td>Calisphere.org</td>
+                    <td>/</td>
+                    <td>Dublin Core</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Song</td>
+                    <td>"Helter Skelter"</td>
+                    <td>MusicBrainz</td>
+                    <td>MusicBrainz</td>
+                    <td>Music Ontology</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Movie</td>
+                    <td>"Once Upon a Time in Hollywood"</td>
+                    <td>IMDb</td>
+                    <td>/</td>
+                    <td>PBcore</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Article</td>
+                    <td>"Actress is Among 5 Slain<br>
+                       at Home in Beverly Hills"</td>
+                    <td>nytimes.com</td>
+                    <td>IPTC NewsCodes</td>
+                    <td>FRBR</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Photo</td>
+                    <td>Coroners with Sharon Tate's body</td>
+                    <td>Getty Images</td>
+                    <td>/</td>
+                    <td>IPTC standard</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Video</td>
+                    <td>Charles Manson appears in<br> 
+                      court for a preliminary hearing</td>
+                    <td>AP Newsroom</td>
+                    <td>AP Ontology</td>
+                    <td>Rico</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Article</td>
+                    <td>"The sinister influence of <br>
+                      Charles Manson"</td>
+                    <td>The New Yorker</td>
+                    <td>/</td>
+                    <td>FRBR</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>Drawing</td>
+                    <td>Charles Manson on the witness stand</td>
+                    <td>Library of Congress</td>
+                    <td>LOC</td>
+                    <td>DCTerms</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+              <br>
+              <h2 id="tit2">Metadata Alignment</h2>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-book-tab" data-bs-toggle="tab" data-bs-target="#book" type="button" role="tab" aria-controls="nav-book" aria-selected="true">Book</button>
+                  <button class="nav-link" id="nav-tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab" aria-controls="nav-tv" aria-selected="false">TV Episode</button>
+                  <button class="nav-link" id="nav-trial-tab" data-bs-toggle="tab" data-bs-target="#trial" type="button" role="tab" aria-controls="nav-trial" aria-selected="false">Trial Transcription</button>
+                  <button class="nav-link" id="nav-photo-tab" data-bs-toggle="tab" data-bs-target="#photo" type="button" role="tab" aria-controls="nav-photo" aria-selected="false">Trail Photo</button>
+                  <button class="nav-link" id="nav-song-tab" data-bs-toggle="tab" data-bs-target="#song" type="button" role="tab" aria-controls="nav-song" aria-selected="false">Song</button>
+                  <button class="nav-link" id="nav-movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button" role="tab" aria-controls="nav-movie" aria-selected="false">Movie</button>
+                  <button class="nav-link" id="nav-article1-tab" data-bs-toggle="tab" data-bs-target="#article1" type="button" role="tab" aria-controls="nav-article1" aria-selected="false">Article<br> 1</button>
+                  <button class="nav-link" id="nav-photo2-tab" data-bs-toggle="tab" data-bs-target="#photo2" type="button" role="tab" aria-controls="nav-photo2" aria-selected="false">Photo</button>
+                  <button class="nav-link" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab" aria-controls="nav-video" aria-selected="false">Video</button>
+                  <button class="nav-link" id="nav-article2-tab" data-bs-toggle="tab" data-bs-target="#article2" type="button" role="tab" aria-controls="nav-article2" aria-selected="false">Article<br> 2</button>
+                  <button class="nav-link" id="nav-drawing-tab" data-bs-toggle="tab" data-bs-target="#drawing" type="button" role="tab" aria-controls="nav-drawing" aria-selected="false">Drawing</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="nav-book-tab">
+                  
+                  <table id="tablebook" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ISBD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator (WHO)</th>
+                        <td>1.4 Statement of responsibility</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has publisher/provider (WHO)</th>
+                        <td>4.2 Name of publisher, producer and/or distributor</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Contributor (co-author) (WHO)</th>
+                        <td>1.4 Statement of responsibility</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has place/location of creation (WHERE)</th>
+                        <td>4.1 Place of publication, production and/or distribution</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has publication date (WHEN)</th>
+                        <td>4.4 Date of publication, production and/or distribution</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation date (WHEN)</th>
+                        <td>4.4 Date of publication, production and/or distribution</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has title (WHAT)</th>
+                        <td>1.1 Title Proper</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has language (WHAT)</th>
+                        <td>7.1.2 Note on nature, scope, form, purpose or language</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has id (WHAT)</th>
+                        <td>8.1 Resource Identifier</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="nav-tv-tab">
+                  
+                  <table id="tablebook" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">PROPERTY</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">schema.org</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator (WHO)</th>
+                        <td>schema:creator</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publisher (WHO)</th>
+                        <td>schema:publisher</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has place/location of creation (WHERE)</th>
+                        <td>schema:location</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publication date (WHEN)</th>
+                        <td>schema:datePublished</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Published (WHEN)</th>
+                        <td>schema:uploadDate</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation date (WHEN)</th>
+                        <td>schema:dateCreated</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has genre (WHAT)</th>
+                        <td>schema:genre</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has title (WHAT)</th>
+                        <td>schema:name</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has language (WHAT)</th>
+                        <td>schema:inLanguage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Is part of (WHAT)</th>
+                        <td>schema:isPartOf</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has duration (WHAT)</th>
+                        <td>schema:duration</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has description (WHAT)</th>
+                        <td>schema:description</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+                <div class="tab-pane fade" id="trial" role="tabpanel" aria-labelledby="nav-trial-tab">
+                  
+                  <table id="marc21table" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MARC21</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Type (WHAT)</th>
+                        <td>007 - Physical Description Fixed Field-General Information</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date (WHEN)</th>
+                        <td>005 - Date and Time of Latest Transaction</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Language (WHAT)</th>
+                        <td>041 - Language Code</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Identifier (WHAT)</th>
+                        <td>003 - Control Number Identifier</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Pages (WHAT)</th>
+                        <td>008 - Fixed-Length Data Elements-General Information</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Person (WHO)</th>
+                        <td>600 - Subject Added Entry-Personal Name</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Provider (WHO)</th>
+                        <td>264 - Production, Publication, Distribution, Manufacture, and Copyright Notice</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation Place (WHERE)</th>
+                        <td>751 - Added Entry-Geographic Name</td>
+                      </tr>
+                    </tbody>
+                  </table>                
+
+                </div>
+                <div class="tab-pane fade" id="photo" role="tabpanel" aria-labelledby="nav-photo-tab">
+                  
+                  <table id="table" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">DublinCore</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">conserved at (WHERE)</th>
+                        <td>dcterms:Coverage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has type (WHAT)</th>
+                        <td>dcterms:type</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has title (WHAT)</t>
+                        <td>dc:title</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has date (WHEN)</th>
+                        <td>dc:date</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has measures (WHAT)</th>
+                        <td>dc:format</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has identifier (WHAT)</th>
+                        <td>dcterms:identifier</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">depicts (WHO)</th>
+                        <td>dcterms:subject</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has contributor (WHO)</th>
+                        <td>dcterms:contributor</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+
+                </div>
+                <div class="tab-pane fade" id="song" role="tabpanel" aria-labelledby="nav-song-tab">
+                  
+                  <table id="tablebook" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MMD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Release Date (WHEN)</th>
+                        <td>&lt;release&gt;/&lt;date&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Producer (WHO)</th>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creator/Writer (WHO)</th>
+                        <td>&lt;artist&gt;/&lt;name&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Distributor/Owner (WHO)</th>
+                        <td>&lt;label&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Performer (WHO)</th>
+                        <td>&lt;artist&gt;/&lt;name&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Is Part Of (WHAT)</th>
+                        <td>&lt;tracklist&gt;/&lt;track&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Genre (WHAT)</th>
+                        <td>&lt;genrelist&gt;/&lt;genre&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Title (WHAT)</th>
+                        <td>&lt;release&gt;/&lt;title&gt;</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Duration (WHAT)</th>
+                        <td>&lt;duration&gt;</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+                <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="nav-movie-tab">
+
+                  <table id="tablebook" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">PBCore</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Director (WHO)</th>
+                        <td>pbcoreCreator</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Actress (WHO)</th>
+                        <td>pbcoreContributor</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Language (WHAT)</th>
+                        <td>pbcoreinstantiationLanguage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Duration (WHAT)</th>
+                        <td>pbcoreCoverage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Distribution (WHAT)</th>
+                        <td>pbcorePublisher</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Genre (WHAT)</th>
+                        <td>pbcoreGenre</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Title (WHAT)</th>
+                        <td>pbcoreTitle</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Country (WHERE)</th>
+                        <td>pbcoreCoverage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date (WHEN)</th>
+                        <td>pbcoreAssetDate</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="article1" role="tabpanel" aria-labelledby="nav-article1-tab">
+
+                  <table id="tablebook" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MARC21</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator/Writer (WHO)</th>
+                        <td>100 $a Personal name</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publication Date (WHEN)</th>
+                        <td>260 $c Date of publication</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Published By (WHO)</th>
+                        <td>260 $b Name of publisher</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Title (WHAT)</th>
+                        <td>245 $a Title</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Language (WHAT)</th>
+                        <td>041 $a Language Code</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Type (WHAT)</th>
+                        <td>007 - Text</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+                <div class="tab-pane fade" id="photo2" role="tabpanel" aria-labelledby="nav-photo2-tab">
+
+                  <table id="iptctable" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">IPTC Standard</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator (WHO)</th>
+                        <td>dc:creator</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publisher/Provider (WHO)</th>
+                        <td>photoshop:Source</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Description (WHAT)</th>
+                        <td>dc:description</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Title (WHAT)</th>
+                        <td>dc:title</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation Date (WHEN)</th>
+                        <td>photoshop:DateCreated</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="nav-video-tab">
+                  
+                  <table id="ricotable" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ICA RIC-O</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">publication date (WHEN)</th>
+                        <td>rico:isAssociatedwithDate</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">creation date (WHEN)</th>
+                        <td>rico:hasBeginningDate</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has title (WHAT)</th>
+                        <td>rico:hasorHadTitle</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has id (WHAT)</th>
+                        <td>rico:hasorHadIdentifier</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has duration (WHAT)</th>
+                        <td>rico:hasUnitOfMeasurement</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">published in (WHERE)</th>
+                        <td>rico:hasPublisher</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="article2" role="tabpanel" aria-labelledby="nav-article2-tab">
+                  
+                  <table id="marc21table" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MARC21</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator (WHO)</th>
+                        <td>100 $a Personal Name</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publication date (WHEN)</th>
+                        <td>260 $c Date of publication</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has title (WHO)</th>
+                        <td>245 $a Title</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has publisher (WHO)</th>
+                        <td>260 $b Name of Publisher</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has page (WHAT)</th>
+                        <td>2-0:pageRange</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has coverage (WHERE)</th>
+                        <td>dc:coverage</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="drawing" role="tabpanel" aria-labelledby="nav-drawing-tab">
+
+                  <table id="dublincoretable" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">DublinCore</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator (WHO)</th>
+                        <td>dc:creator</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publisher (WHO)</th>
+                        <td>dc:publisher</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Conserved in (WHERE)</th>
+                        <td>dcterms:Coverage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation Date (WHEN)</th>
+                        <td>dc:DateCreated</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Title (WHAT)</th>
+                        <td>dc:title</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Description (WHAT)</th>
+                        <td>dc:description</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Has Format (WHAT)</th>
+                        <td>dc:hasFormat</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+              </div>
+
+              <br>
+              <p style="color: white;">Align:</p>
+              <br>
+              
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-who-tab" data-bs-toggle="tab" data-bs-target="#who" type="button" role="tab" aria-controls="nav-eho" aria-selected="true">WHO</button>
+                  <button class="nav-link" id="nav-where-tab" data-bs-toggle="tab" data-bs-target="#where" type="button" role="tab" aria-controls="nav-where" aria-selected="false">WHERE</button>
+                  <button class="nav-link" id="nav-when-tab" data-bs-toggle="tab" data-bs-target="#when" type="button" role="tab" aria-controls="nav-when" aria-selected="false">WHEN</button>
+                  <button class="nav-link" id="nav-what-tab" data-bs-toggle="tab" data-bs-target="#what" type="button" role="tab" aria-controls="nav-what" aria-selected="false">WHAT</button>
+                </div>
+              </nav>
+              <div class="tab-content tab-responsive" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="who" role="tabpanel" aria-labelledby="nav-book-tab">
+                  
+                  <table class="table table-responsive table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Fabio</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">schema.org</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Dublin Core</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MMO</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">IPTC</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ISBD</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Marc21</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">PBCore</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ICA RIC-O</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Creator</th>
+                        <td>has creator</td>
+                        <td>schema:creator</td>
+                        <td>dc:creator</td>
+                        <td>/</td>
+                        <td>dc:creator</td>
+                        <td>1.4 Statement of responsibility</td>
+                        <td>100 - Main Entry - Personal Name</td>
+                        <td>pbcoreCreator</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Publisher</th>
+                        <td>has publisher</td>
+                        <td>schema:publisher</td>
+                        <td>dc:publisher</td>
+                        <td>mo:label</td>
+                        <td>/</td>
+                        <td>4.2 Name of publisher, producer and/or distributor</td>
+                        <td>260 - Publication, Distribution, etc.</td>
+                        <td>pbcorePublisher</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Producer/<br>Provider</th>
+                        <td>/</td>
+                        <td>schema:producer</td>
+                        <td>/</td>
+                        <td>mo:producer</td>
+                        <td>photoshop:source</td>
+                        <td>/</td>
+                        <td>264 - Production, Publication, Distribution, Manufacture, and Copyright Notice</td>
+                        <td>/</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Contributor/<br>Co-author</th>
+                        <td>/</td>
+                        <td>schema:contributor</td>
+                        <td>dc:contributor</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>1.4 Statement of responsibility</td>
+                        <td>508 - Creation/Production Credits Note</td>
+                        <td>pbcoreContributor</td>
+                        <td>/</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="where" role="tabpanel" aria-labelledby="nav-tv-tab">
+                  
+                  <table class="table table-responsive table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Fabio</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">schema.org</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Dublin Core</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MMO</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">IPTC</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ISBD</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Marc21</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">PBCore</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ICA RIC-O</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Conserved in</th>
+                        <td>is stored on </td>
+                        <td>schema::archivedAt</td>
+                        <td>dcterms:Coverage</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>270 - Address</td>
+                        <td>/</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has place/<br>Llocation of creation</th>
+                        <td>/</td>
+                        <td>schema:location</td>
+                        <td>dcterms:Coverage</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>4.1 Place of publication,<br>production and/or<br>
+                          distribution
+                          </td>
+                        <td>257 - Country of Producing Entity</td>
+                        <td>pbcoreCoverage</td>
+                        <td>/</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+
+                </div>
+                <div class="tab-pane fade" id="when" role="tabpanel" aria-labelledby="nav-trial-tab">
+                  
+                  <table class="table table-responsive table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Fabio</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">schema.org</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Dublin Core</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MMO</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">IPTC</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ISBD</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Marc21</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">PBCore</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ICA RIC-O</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Publication date</th>
+                        <td>has publication date</td>
+                        <td>schema:datePublished/<br>schema:uploadDate</td>
+                        <td>dc:date</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>4.4 Date of publication, production and/or distribution</td>
+                        <td>263 - Projected Publication Date</td>
+                        <td>pbcoreAssetDate</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation date</th>
+                        <td>has creation date</td>
+                        <td>schema:dateCreated</td>
+                        <td>dc:DateCreated</td>
+                        <td>/</td>
+                        <td>photoshop:DateCreated</td>
+                        <td>4.4 Date of publication, production and/or distribution
+                          </td>
+                        <td>388 - Time Period of Creation</td>
+                        <td>/</td>
+                        <td>/</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="where" role="tabpanel" aria-labelledby="nav-tv-tab">
+                  
+                  <table class="table table-responsive table-dark table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Fabio</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">schema.org</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Dublin Core</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">MMO</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">IPTC</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ISBD</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Marc21</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">PBCore</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">ICA RIC-O</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Publication date</th>
+                        <td>has publication date</td>
+                        <td>schema:datePublished/<br>schema:uploadDate</td>
+                        <td>dc:date</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>4.4 Date of publication, production and/or distribution</td>
+                        <td>263 - Projected Publication Date</td>
+                        <td>pbcoreAssetDate</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creation date</th>
+                        <td>has creation date</td>
+                        <td>schema:dateCreated</td>
+                        <td>dc:DateCreated</td>
+                        <td>/</td>
+                        <td>photoshop:DateCreated</td>
+                        <td>4.4 Date of publication, production and/or distribution
+                          </td>
+                        <td>388 - Time Period of Creation</td>
+                        <td>/</td>
+                        <td>/</td>
+                      </tr>
+                    </tbody>
+                  </table>          
+
+                </div>
+                <div class="tab-pane fade" id="what" role="tabpanel" aria-labelledby="nav-photo-tab">
+                  
+                  <table id="table" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Property</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">DublinCore</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">conserved at (WHERE)</th>
+                        <td>dcterms:Coverage</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has type (WHAT)</th>
+                        <td>dcterms:type</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has title (WHAT)</t>
+                        <td>dc:title</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has date (WHEN)</th>
+                        <td>dc:date</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has measures (WHAT)</th>
+                        <td>dc:format</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has identifier (WHAT)</th>
+                        <td>dcterms:identifier</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">depicts (WHO)</th>
+                        <td>dcterms:subject</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">has contributor (WHO)</th>
+                        <td>dcterms:contributor</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div> 
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">Theoretical Model</h1>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <div class="iframe-container"><iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbgOjnE=/?moveToViewport=7097,-1292,8689,4697&embedId=521554692018" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe></div>
+              <p style="color: white; text-align: center; padding: 1%;"><i class="bi bi-box-arrow-down"></i> Click and download the image of the graph <i class="bi bi-box-arrow-down"></i></p>
+              <a href="immagini/theoreticalmodel.jpg" download>
+                <img class="graph" src="immagini/theoreticalmodel.jpg" alt="conceptual map" width="45%">
+              </a>
+              <br>
+              <h2 id="tit2">E/R Model Enhanced</h2>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <div class="iframe-container"><iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbhdXPk=/?moveToViewport=3683,-900,3195,1776&embedId=739679631990" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe></div>
+              <p style="color: white; text-align: center; padding: 1%;"><i class="bi bi-box-arrow-down"></i> Click and download the image of the graph <i class="bi bi-box-arrow-down"></i></p>
+              <a href="immagini/ERMODEL2.jpg" download>
+                <img class="graph" src="immagini/ERMODEL2.jpg" alt="conceptual map" width="45%">
+              </a>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">Conceptual Model</h1>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <div class="iframe-container"><iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbwPKP4=/?moveToViewport=-8500,-3477,15175,9227&embedId=695389744107" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe></div>
+              <p style="color: white; text-align: center; padding: 1%;"><i class="bi bi-box-arrow-down"></i> Click and download the image of the graph <i class="bi bi-box-arrow-down"></i></p>
+              <a href="immagini/ConceptualModel.jpg" download>
+                <img class="graph" src="immagini/ConceptualModel.jpg" alt="conceptual map" width="45%">
+              </a>
+              <br>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">Knowledge Representation</h1>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <h2 class="titolo2">CVS production</h2>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-book-tab" data-bs-toggle="tab" data-bs-target="#tablebook" type="button" role="tab" aria-controls="nav-book" aria-selected="true">Book</button>
+                  <button class="nav-link" id="nav-tv-tab" data-bs-toggle="tab" data-bs-target="#tabletv" type="button" role="tab" aria-controls="nav-tv" aria-selected="false">TV Episode</button>
+                  <button class="nav-link" id="nav-trial-tab" data-bs-toggle="tab" data-bs-target="#tabletrial" type="button" role="tab" aria-controls="nav-trial" aria-selected="false">Trial<br> Transcription</button>
+                  <button class="nav-link" id="nav-photo-tab" data-bs-toggle="tab" data-bs-target="#tablephoto" type="button" role="tab" aria-controls="nav-photo" aria-selected="false">Trail Photo</button>
+                  <button class="nav-link" id="nav-song-tab" data-bs-toggle="tab" data-bs-target="#tablesong" type="button" role="tab" aria-controls="nav-song" aria-selected="false">Song</button>
+                  <button class="nav-link" id="nav-movie-tab" data-bs-toggle="tab" data-bs-target="#tablemovie" type="button" role="tab" aria-controls="nav-movie" aria-selected="false">Movie</button>
+                  <button class="nav-link" id="nav-article1-tab" data-bs-toggle="tab" data-bs-target="#tablearticle1" type="button" role="tab" aria-controls="nav-article1" aria-selected="false">Article<br> 1</button>
+                  <button class="nav-link" id="nav-photo2-tab" data-bs-toggle="tab" data-bs-target="#tablephoto2" type="button" role="tab" aria-controls="nav-photo2" aria-selected="false">Archival<br> Photo</button>
+                  <button class="nav-link" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#tablevideo" type="button" role="tab" aria-controls="nav-video" aria-selected="false">Video</button>
+                  <button class="nav-link" id="nav-article2-tab" data-bs-toggle="tab" data-bs-target="#tablearticle2" type="button" role="tab" aria-controls="nav-article2" aria-selected="false">Article<br> 2</button>
+                  <button class="nav-link" id="nav-drawing-tab" data-bs-toggle="tab" data-bs-target="#tabledrawing" type="button" role="tab" aria-controls="nav-drawing" aria-selected="false">Drawing</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="tablebook" role="tabpanel" aria-labelledby="nav-book-tab">
+                  
+                  <table id="table1" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Book (What)</th>
+                        <td>crm:P72_has_Language</td>
+                        <td>English</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (What)</th>
+                        <td>dc:title</td>
+                        <td>Helter Skelter : the true story of Manson murders</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (Who)</th>
+                        <td>schema:publisher</td>
+                        <td>Bantam Books</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (Where)</th>
+                        <td>fabio:hasPlaceOfPublication</td>
+                        <td>Toronto</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (Who)</th>
+                        <td>bibo:authorList</td>
+                        <td>Vincent Bugliosi, Curt Gentry</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (What)</th>
+                        <td>dc:identifier</td>
+                        <td>IT\ICCU\LIG\0080585</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (When)</th>
+                        <td>Schema:foundingdate</td>
+                        <td>1975</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Book (When)</th>
+                        <td>schema:location</td>
+                        <td>Canada</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="tab-pane fade" id="tabletv" role="tabpanel" aria-labelledby="nav-tv-tab">
+                  
+                  <table id="table2" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">TV Episode (What)</th>
+                        <td>dc:title</td>
+                        <td>Charles (Manson) in Charge</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (When)</th>
+                        <td>schema:datePublished</td>
+                        <td>November 10, 2017</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (What)</th>
+                        <td>schema:inLanguage</td>
+                        <td>English</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (What)</th>
+                        <td>schema:genre</td>
+                        <td>Drama, Horror, Sci-fi, Thriller</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (What)</th>
+                        <td>schema:isPartOf</td>
+                        <td>American Horror Story</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (Where)</th>
+                        <td>schema:location</td>
+                        <td>United States</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (What)</th>
+                        <td>schema:duration</td>
+                        <td>50 minutes</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">TV Episode (Who)</th>
+                        <td>schema:director</td>
+                        <td>Bradley Buecker</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+                <div class="tab-pane fade" id="tabletrial" role="tabpanel" aria-labelledby="nav-trial-tab">
+                  
+                  <table id="table3" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Trial Transcription (WHO)</th>
+                        <td>schema:contributor</td>
+                        <td>Charles H. Older</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Trial Transcription(WHAT)</th>
+                        <td>dc:hasFormat</td>
+                        <td>PDF</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Trial Transcription(WHERE)</th>
+                        <td>bibo:distributor</td>
+                        <td>CieloDrive.com</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Trial Transcription (WHAT)</th>
+                        <td>bibo:numPages</td>
+                        <td>300</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Trial Transcription(WHEN)</th>
+                        <td>dc:date</td>
+                        <td>Monday, June 15, 1970</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Trial Transcription(WHAT)</th>
+                        <td>dc:identifier</td>
+                        <td>A253156</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                                  
+                </div>
+                <div class="tab-pane fade" id="tablephoto" role="tabpanel" aria-labelledby="nav-photo-tab">
+                  
+                  <table id="table4" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">T.T. Image (WHO)</th>
+                        <td>foaf:depicts</td>
+                        <td>Stephen Kay</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHAT)</th>
+                        <td>dc:hasFormat</td>
+                        <td>jpg</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHERE)</th>
+                        <td>crm:P54_has_current_permanent_location</td>
+                        <td>Los Angeles Public Library Photo Collection</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHAT)</th>
+                        <td>dc:type</td>
+                        <td>image</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHAT)</th>
+                        <td>schema:hasMeasurement</td>
+                        <td>21x26cm</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHAT)</th>
+                        <td>dc:identifier</td>
+                        <td>00020629</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHEN)</th>
+                        <td>dc:date</td>
+                        <td>January 19, 1971</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">T.T. Image (WHAT)</th>
+                        <td>schema:contributor</td>
+                        <td>John Randolph Haynes and Dora Haynes Foundation</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  
+
+                </div>
+                <div class="tab-pane fade" id="tablesong" role="tabpanel" aria-labelledby="nav-song-tab">
+                  
+                  <table id="table5" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>schema:duration</td>
+                        <td>3:40</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>schema:datePublished</td>
+                        <td>November 22nd 1968</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>mo:genre</td>
+                        <td>Hard rock</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>dc:title</td>
+                        <td>“Helter Skelter”</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>schema:lyricist</td>
+                        <td>Paul Mccartney and John Lennon</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>schema:copyrightHolder</td>
+                        <td>Apple Records</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>dc:isPartOf</td>
+                        <td>The White Album</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Song</th>
+                        <td>mo:producer</td>
+                        <td>George Martin</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                                    
+
+                </div>
+                <div class="tab-pane fade" id="tablemovie" role="tabpanel" aria-labelledby="nav-movie-tab">
+
+                  <table id="table6" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Movie (WHO)</th>
+                        <td>schema:actor</td>
+                        <td>Margot Robbie</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHAT)</th>
+                        <td>schema:genre</td>
+                        <td>Drama</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHERE)</th>
+                        <td>schema:countryOfOrigin</td>
+                        <td>USA</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHAT)</th>
+                        <td>schema:productionCompany</td>
+                        <td>Columbia Pictures</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHEN)</th>
+                        <td>schema:datePublished</td>
+                        <td>July 26th 2019</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHAT)</th>
+                        <td>schema:duration</td>
+                        <td>160 min</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHAT)</th>
+                        <td>schema:director</td>
+                        <td>Quentin Tarantino</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Movie (WHAT)</th>
+                        <td>dc:Language</td>
+                        <td>American English</td>
+                      </tr>
+                    </tbody>
+                  </table>                                    
+
+                </div>
+                <div class="tab-pane fade" id="tablearticle1" role="tabpanel" aria-labelledby="nav-article1-tab">
+
+                  <table id="table7" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Article</th>
+                        <td>schema:datePublished</td>
+                        <td>November 20th 2017</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Article</th>
+                        <td>dc:publisher</td>
+                        <td>The NewYorker</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Article</th>
+                        <td>dc:title</td>
+                        <td>“The sinister influence of Charles Manson”</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Article</th>
+                        <td>dc:author</td>
+                        <td>Jeffrey Toobin</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Article</th>
+                        <td>dc:language</td>
+                        <td>English</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                                    
+
+                </div>
+                <div class="tab-pane fade" id="tablephoto2" role="tabpanel" aria-labelledby="nav-photo2-tab">
+
+                  <table id="table8" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Archival photo</th>
+                        <td>photoshop:Source</td>
+                        <td>gettyimages.com</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Archival photo</th>
+                        <td>dc:creator</td>
+                        <td>Bettmann Archive</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Archival photo</th>
+                        <td>photoshop:dateCreated</td>
+                        <td>1969-08-09</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Archival photo</th>
+                        <td>dc:title</td>
+                        <td>Coroners with Sharon Tate's Body</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Archival photo</th>
+                        <td>dc:description</td>
+                        <td>Coroner's office personnel wheel the body of film actress Sharon Tate from her home in Bel Air, California, August 9th after she and four others were found murdered. Homicide squads fanned out across Los Angeles August 11th attempting to tie together those slayings and the bizarre deaths of a married couple a dozen miles away.</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+                <div class="tab-pane fade" id="tablevideo" role="tabpanel" aria-labelledby="nav-video-tab">
+                  
+                  <table id="table9" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Video</th>
+                        <td>rico:isAssociatedwithDate</td>
+                        <td>October 27th 2008</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Video</th>
+                        <td>rico:hasPublisher</td>
+                        <td>AP Newsroom Archive</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Video</th>
+                        <td>rico:hasOrHadTitle</td>
+                        <td>“Charles Manson appears in court for a preliminary hearing”</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Video</th>
+                        <td>rico:hasBeginningDate</td>
+                        <td>December 3rd 1969</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Video</th>
+                        <td>rico:hasUnitOfMeasurement</td>
+                        <td>48 seconds</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Video</th>
+                        <td>rico:hasOrHadIdentifier</td>
+                        <td>z000016</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+                </div>
+                <div class="tab-pane fade" id="tablearticle2" role="tabpanel" aria-labelledby="nav-article2-tab">
+                  
+                  <table id="table10" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">The New York Times headline</th>
+                        <td>dc:publisher</td>
+                        <td>The New York Times</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">The New York Times headline</th>
+                        <td>dc:coverage</td>
+                        <td>Los Angeles</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">The New York Times headline</th>
+                        <td>dc:creator</td>
+                        <td>Steven V. Roberts</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">The New York Times headline</th>
+                        <td>schema:datePublished</td>
+                        <td>1969-08-10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">The New York Times headline</th>
+                        <td>dc:title</td>
+                        <td>Actress Is Among 5 Slain At Home in Beverly Hills; Sharon Tate, 2d Woman and 3 Men Victims -Suspect Is Seized</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">The New York Times headline 2-0</th>
+                        <td>2-0:pageRange</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+                <div class="tab-pane fade" id="tabledrawing" role="tabpanel" aria-labelledby="nav-drawing-tab">
+
+                  <table id="table11" class="table table-dark table-hover table-bordered border-warning">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Subject</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Predicate</th>
+                        <th scope="col" style="color: rgb(255, 213, 0);">Object</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Drawing (What)</th>
+                        <td>dc:title</td>
+                        <td>Charles Manson on the witness stand</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (Where)</th>
+                        <td>crm:P67_refers_to</td>
+                        <td>Cielo Drive massacre</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (What)</th>
+                        <td>dc:hasformat</td>
+                        <td>India ink and watercolor</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (Who)</th>
+                        <td>dc:publisher</td>
+                        <td>New York : CUNY Journalism Press, 2014</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (What)</th>
+                        <td>dc:description</td>
+                        <td>Sketch shows Manson in prison jumpsuit seated on witness stand at the Tate-LaBianca murder trial in Los Angeles, California.</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (When)</th>
+                        <td>dc:datecreated</td>
+                        <td>November 1970</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (Who)</th>
+                        <td>dc:creator</td>
+                        <td>William. T. Robles</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Drawing (Who)</th>
+                        <td>schema:subjectOF</td>
+                        <td>Charles Manson</td>
+                      </tr>
+                    </tbody>
+                  </table>                  
+
+              <br>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      
+      <br>
+      <br>
+      <br>
+
+      <div class="container-fluid">
+        <div class="backbiblio container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <br>
+              <h1 class="titolo2">RDF Production</h1>
+              <br>
+              <p style="color: white;">sojcpsjvICNEWòVOEMEDDOKKKKKKKKKKKKKKKKlnvoieanveòwvnivmaevaàemvprevmblòd,vmldV°Abmfbùmerc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dcssssssssssss
+              </p>
+              <br>
+              <div class="iframe-container"><iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbwPKP4=/?moveToViewport=-8500,-3477,15175,9227&embedId=695389744107" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe></div>
+              <p style="color: white; text-align: center; padding: 1%;"><i class="bi bi-box-arrow-down"></i> Click and download the image of the graph <i class="bi bi-box-arrow-down"></i></p>
+              <a href="immagini/ConceptualModel.jpg" download>
+                <img class="graph" src="immagini/ConceptualModel.jpg" alt="conceptual map" width="45%">
+              </a>
+              <br>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <section id="background">
+      <br>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <h2 class="titolocard1" style="color: black;">Group member</h2>
+              <br>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="cardrossa border-light text-white text-center rounded">
+                <div class="card-header">Arthur Conan Doyle Archive</div>
+                <div class="card-body text-white">
+                  <h5 class="card-title">website</h5>
+                  <p class="card-text">Web source of Arthur Conan Doyle's letters and other works</p>
+                  <a href="https://www.arthur-conan-doyle.com/index.php/Main_Page" target="blank" class="btn btn-outline-dark btn-sm" id="bottone">Go to the website</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="cardrossa border-light text-white text-center rounded">
+                <div class="card-header">ACD Estate</div>
+                <div class="card-body text-white">
+                  <h5 class="card-title">archive</h5>
+                  <p class="card-text">Source of the family of Sir Arthur Conan Doyle</p>
+                  <a href="https://conandoyleestate.com/" target="blank" class="btn btn-outline-dark btn-sm" id="bottone">Go to the website</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="cardrossa border-light text-white text-center rounded">
+                <div class="card-header">National Army Museum</div>
+                <div class="card-body text-white">
+                  <h5 class="card-title">link</h5>
+                  <p class="card-text">Section of the British National Army Museum dedicated to the Boer War</p>
+                  <a href="https://www.nam.ac.uk/explore/boer-war" target="blank" class="btn btn-outline-dark btn-sm" id="bottone">Go to the website</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+      </section>
+
+      
       <div class="nero container-fluid">
         <div class="row">
           <div class="col-md-1"></div>
@@ -138,123 +2024,13 @@
         <br>
       </div>
     </section>   
-      
+    
     <div class="container-fluid" id="background">
       <br>
       <br>
       <br>
       <br>
-    </div> 
-
-    <section class="nero container-fluid">
-      <div class="row"><br></div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="cardok bg-light rounded">
-            <div class="card-body text-dark">
-              <h5 class="card-title"><i class="bi bi-envelope-open"></i> Letters</h5>
-              <p class="card-text">Explore the letters of Sir Arthur Conan Doyle during the war</p> 
-            </div>
-            <a href="#" class="btn btn-outline-dark btn-sm" id="bottone" target="_blank" title="Go to letters">Go to the letters</a>
-            <br>
-            <div id="carouselpiccolo" class="carousel slide" data-interval="2000" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="immagini/sanpietro.jpg" class="d-block w-100" alt="">
-                  <div class="carousel-caption" style="padding-bottom: 1px;">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="immagini/santagnese.jpg" class="d-block w-100" alt="">
-                  <div class="carousel-caption" style="padding-bottom: 1px;">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="immagini/santalucia.jpg" class="d-block w-100" alt="">
-                  <div class="carousel-caption" style="padding-bottom: 1px;">
-                  </div>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="cardok bg-light rounded">
-            <div class="card-body text-dark">
-              <h5 class="card-title"><i class="bi bi-images"></i> Multimedia</h5>
-              <p class="card-text">Photos from the Boer War</p>
-            </div>
-            <a href="#" class="btn btn-outline-dark btn-sm" id="bottone" target="_blank" title="Go to the gallery">Go to the gallery</a>
-            <img src="immagini/deco.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="cardok bg-light rounded">
-            <div class="card-body text-dark">
-              <h5 class="card-title"><i class="bi bi-compass"></i>The map</h5>
-              <p class="card-text">Explore the sending locations of the letters</p>
-            </div>
-            <a href="#" class="btn btn-outline-dark btn-sm" id="bottone" target="_blank" title="Go to maps">Go to Map</a>
-            <img src="immagini/antifona1.jpg" class="d-block w-100" alt="...">
-            </div> 
-          </div>
-        </div>
-      </div>
-      <br>
-    </section>  
-
-
-    <section id="background">
-    <br>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <h2 class="titolocard1" style="color: black;">Other sources</h2>
-            <br>
-          </div>
-          <div class="col-md-1"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="cardrossa border-light text-white text-center rounded">
-              <div class="card-header">Arthur Conan Doyle Archive</div>
-              <div class="card-body text-white">
-                <h5 class="card-title">website</h5>
-                <p class="card-text">Web source of Arthur Conan Doyle's letters and other works</p>
-                <a href="https://www.arthur-conan-doyle.com/index.php/Main_Page" target="blank" class="btn btn-outline-dark btn-sm" id="bottone">Go to the website</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="cardrossa border-light text-white text-center rounded">
-              <div class="card-header">ACD Estate</div>
-              <div class="card-body text-white">
-                <h5 class="card-title">archive</h5>
-                <p class="card-text">Source of the family of Sir Arthur Conan Doyle</p>
-                <a href="https://conandoyleestate.com/" target="blank" class="btn btn-outline-dark btn-sm" id="bottone">Go to the website</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="cardrossa border-light text-white text-center rounded">
-              <div class="card-header">National Army Museum</div>
-              <div class="card-body text-white">
-                <h5 class="card-title">link</h5>
-                <p class="card-text">Section of the British National Army Museum dedicated to the Boer War</p>
-                <a href="https://www.nam.ac.uk/explore/boer-war" target="blank" class="btn btn-outline-dark btn-sm" id="bottone">Go to the website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-    </section>
+    </div>
 
     
 
