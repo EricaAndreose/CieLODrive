@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdfsyntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix schema: <https://schema.org/> .
 @prefix dc: <http://purl.org/dc/terms/> .
@@ -20,6 +21,7 @@
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 
 <http://purl.org/cieLODrive/event/CieloDrive_murders> a crm:E5_Event ;
+	skos:broader <https://www.wikidata.org/wiki/Q114345134> ;
 	schema:subjectOf <http://purl.org/cieLODrive/article/sinister_influence_article> ;
 	schema:subjectOf <http://purl.org/cieLODrive/newspaper_article/among_5_slain_article> ;
 	schema:subjectOf <http://purl.org/cieLODrive/movie/OUATIH_movie> ;
@@ -29,17 +31,18 @@
 	schema:image <http://purl.org/cieLODrive/image/coroners_with_body_image> ;
 	schema:hasdescription <http://purl.org/cieLODrive/item/The_true_story_of_Manson_murders> ;
 	bibo:presents <http://purl.org/cieLODrive/document/trial_transcription_A253156> ;
-	crm:P11_had_participant crm:E74_Group ;
-	crm:P11_had_participant crm:E74_Group ;
+	crm:P11_had_participant crm:E74_Group ; # list of murderers
+	crm:P11_had_participant crm:E74_Group ; # list of victims
 	crm:P11_had_participant <http://purl.org/cieLODrive/person/CharlesManson> .
 
 <http://purl.org/cieLODrive/event/Trial_A253156> a crm:E5_Event ;
-	crm:P7_took_place_at <https://viaf.org/viaf/151867752/> .
+	skos:related <http://purl.org/cieLODrive/event/CieloDrive_murders> ;
+	crm:P7_took_place_at <https://viaf.org/viaf/151867752/> . # authority control for Supreme Court of California
 
 <http://purl.org/cieLODrive/place/BeverlyHills-Cielo-Drive> a crm:E53_Place;
-	owl:sameas <https://sws.geonames.org/5328041> ;
+	owl:sameas <https://sws.geonames.org/5328041> ; # authority for Beverly Hills where the murders took place
 	schema:geo "34.093916048156316, -118.43239173074238"^^schema:GeoCoordinates ;
-	schema:postalCode "10050"^^xsd:int.
+	schema:postalCode <http://purl.org/cieLODrive/place/BeverlyHills-Cielo-Drive/postalcode> .
 
 <http://purl.org/cieLODrive/date/1969> a crm:E52_Time_span ;
 	crm:P4_has_time_span <http://purl.org/cieLODrive/event/Zodiac-case> .
@@ -48,7 +51,7 @@
 	crm:P7_took_place_at <http://purl.org/cieLODrive/place/California> .
 
 <http://purl.org/cieLODrive/place/California> a schema:Country ;
-	owl:sameas <https://sws.geonames.org/12213683> ;
+	owl:sameas <https://sws.geonames.org/5332921> ; # authority control for California
 	crm:P172_contains <http://purl.org/cieLODrive/place/BeverlyHills-Cielo-Drive> .
 
 <http://purl.org/cieLODrive/person/CharlesManson> a foaf:Person ;
@@ -56,119 +59,104 @@
 	schema:subjectOf <http://purl.org/cieLODrive/item/Charles_Manson_on_the_witness_stand> ;
 	schema:subjectOf <http://purl.org/cieLODrive/item/Cult-Charles_(Manson)_in_Charge> ;
 	foaf:name "Charles Manson"^^xsd:string ;
-	owl:sameas <http://viaf.org/viaf/113072501> ;
+	owl:sameas <http://viaf.org/viaf/113072501> ; #authority control for Charles Manson
 	crm:P98i_was_born "1932-11-12"^^schema:date ;
 	rdf:type "murderer"^^xsd:string ;
 	rdf:type "mandator"^^xsd:string .
 
 <http://purl.org/cieLODrive/image/coroners_with_body_image> a fabio:stillImage ;
-	photoshop:Source <https://viaf.org/viaf/240063952/> ;
-	dc:creator <https://viaf.org/viaf/151544970/> ;
+	photoshop:Source <https://viaf.org/viaf/151544970/> ; # authority control for Bettmann Archive
+	dc:creator <https://viaf.org/viaf/240063952/> ; # authority control for GettyImages
 	photoshop:dateCreated "1969-08-09"^^xsd:date ;
 	dc:title "Coroners with Sharon Tate's Body"^^xsd:string ;
 	dc:description "Coroner's office personnel wheel the body of film actress Sharon Tate from her home in Bel Air, California, August 9th after she and four others were found murdered. Homicide squads fanned out across Los Angeles August 11th attempting to tie together those slayings and the bizarre deaths of a married couple a dozen miles away."^^xsd:string .
 
 <http://purl.org/cieLODrive/item/The_true_story_of_Manson_murders> a bibo:book ;
   dc:identifier "IT/ICCU/LIG/0080585"^^xsd:string;
-  crm:P72_has_Language <https://www.wikidata.org/wiki/Q1860> ;
+  crm:P72_has_Language <https://www.wikidata.org/wiki/Q1860> ; # link to the wikidata page of English
   dc:title "Helter Skelter : the true story of Manson murders"^^xsd:string ;
-  schema:publisher <http://viaf.org/viaf/519147871989775170000> ;
-  fabio:has_PlaceOfPublication <https://sws.geonames.org/6167865/> ;
-  schema:foundingdate "1975"^^xsd:year ;
-  schema:location <https://sws.geonames.org/6251999/> ;
-  bibo:authorList <http://viaf.org/viaf/102388509>,<http://viaf.org/viaf/79026014> ;
-  schema:has_about<http://purl.org/cieLODrive/person/CharlesManson> .
+  schema:publisher <http://viaf.org/viaf/519147871989775170000> ; # authority control for Bantam Books
+  fabio:has_PlaceOfPublication <https://sws.geonames.org/6167865/> ; # authority control for the city of Toronto
+  schema:foundingdate "1945"^^xsd:year ;
+  schema:location <https://sws.geonames.org/5128581/> ; # authority control for New York City
+  bibo:authorList <http://viaf.org/viaf/102388509>,<http://viaf.org/viaf/79026014> ; # authority control for Vincent Bugliosi and Curt Gentry
+  schema:about <http://purl.org/cieLODrive/person/CharlesManson> .
 
 <http://purl.org/cieLODrive/item/Cult-Charles_(Manson)_in_Charge> a schema:TVEpisode ;
-  schema:datePublished "2017-11-10"^^xsd:date ;
+  schema:datePublished "2017-11-07"^^xsd:date ; 
   dc:title "Cult- Charles (Manson) in Charge"^^xsd:string ;
-  schema:inLanguage <https://www.wikidata.org/wiki/Q1860> ;
-  schema:isPartOf <http://viaf.org/viaf/305243874> ;
-  schema:productionCompany <http://viaf.org/viaf/130322721>;
-  schema:location <https://sws.geonames.org/6252001/> ;
+  schema:inLanguage <https://www.wikidata.org/wiki/Q1860> ; 
+  schema:isPartOf <http://viaf.org/viaf/305243874> ; # authority control for American Horror Story
+  schema:productionCompany <http://viaf.org/viaf/130322721>; # authority control 20th Century Fox
+  schema:location <https://sws.geonames.org/6252001/> ; # authority control for United States
   schema:duration "50 min"^^xsd:string ;
-  schema:director <http://viaf.org/viaf/305832516> .
+  schema:director <http://viaf.org/viaf/305832516> . # authority control for Bradley Buecker
 
 <http://purl.org/cieLODrive/item/Charles_Manson_on_the_witness_stand> a dctype:Image ;
   crm:P67_refers_to <http://purl.org/cieLODrive/event/Trial_A253156> ;
   dc:hasformat "drawing"^^xsd:string ;
-  schema:subjectOF <https://viaf.org/viaf/113072501/> ;
-  dc:publisher <http://viaf.org/viaf/173792799> ;
+  schema:subjectOF <https://viaf.org/viaf/113072501/> ; # authority control for Charles Manson
+  dc:publisher <http://viaf.org/viaf/173792799> ; # authority control for Cuny graduate school of Journalism
   dc:description "Sketch shows Manson in prison jumpsuit seated on witness stand at the Tate-LaBianca murder trial in Los Angeles, California."^^xsd:string ;
-  dc:datecreated "1970-11"^^xsd:date ;
-  dc:creator <http://viaf.org/viaf/61174622> ;
+  dc:datecreated "November 1970"^^xsd:date ;
+  dc:creator <http://viaf.org/viaf/61174622> ; # authority control for William Robles
   dc:title "Charles Manson on the witness stand"^^xsd:string .
 
 <http://purl.org/cieLODrive/movie/OUATH> a schema:Movie ;
- schema:actor <http://viaf.org/viaf/303826344> ; #viaf page of Margot Robbie
+ schema:actor <http://viaf.org/viaf/303826344> ; # authority control for Margot Robbie
  schema:genre "drama"^^xsd:string ; 
- schema:countryofOrigin <https://sws.geonames.org/6252001/> ;
- schema:productionCompany <http://viaf.org/viaf/159780097> ;
+ schema:countryofOrigin <https://sws.geonames.org/6252001/> ; # authority control for United States
+ schema:productionCompany <http://viaf.org/viaf/159780097> ; # authority control for Columbia Pictures
  schema:duration "160"^^xsd:int ;
- schema:director <http://viaf.org/viaf/37054403> ;
- dc:language <https://www.wikidata.org/wiki/Q1860> ;
+ schema:director <http://viaf.org/viaf/37054403> ; # authority control for Quentin Tarantino
+ dc:language <https://www.wikidata.org/wiki/Q1860> ; 
  schema:datePublished "2019-05-21"^^xsd:date .
 
 <http://purl.org/cieLODrive/document/trial_transcription_A253156> a bibo:LegalCaseDocument ;
  bibo:transcriptOf <http://purl.org/cieLODrive/event/Trial_A253156> ;
- schema:contributor <https://www.wikidata.org/wiki/Q2959932> ;
+ schema:contributor <https://www.wikidata.org/wiki/Q2959932> ; # authority control for Charles Older
  dc:hasFormat "PDF"^^xsd:string ;
  bibo:numPages "30"^^xsd:int ;
  dc:date "1970-06-15"^^xsd:date ;
  dc:Identifier "A253156"^^xsd:string ;
- bibo:distributor <http://www.cielodrive.com/> .
+ bibo:distributor <http://www.cielodrive.com/> . # link for the distributor website
 
 <http://purl.org/cieLODrive/article/sinister_influence_article> a bibo:article ;
-	schema:datePublished "2017-11-20"^^xsd:date ;
+	schema:datePublished schema:Date ;
 	dc:publisher <http://purl.org/cieLODrive/magazine/NEWYORKER> ;
-	dc:author <http://viaf.org/viaf/32068823> ;
+	dc:author <http://viaf.org/viaf/32068823> ; # authority control for Jeffrey Toobin
 	dc:title "The sinister influence of Charles Manson"^^xsd:string ;
-	dc:language <https://www.wikidata.org/wiki/Q1860>.
+	dc:language <https://www.wikidata.org/wiki/Q1860>. 
 
 <http://purl.org/cieLODrive/magazine/NEWYORKER> a bibo:Magazine ; 
-	org:hasSite <https://sws.geonames.org/5128581> ;
-	schema:foundingDate "1925"^^xsd:year.
+	org:hasSite <https://sws.geonames.org/5128581> ; # authority control for New York City
+	schema:foundingDate "1925"^^xsd:date.
 
 <http://purl.org/cieLODrive/song/Helter_Skelter_song> a mo:track;
 	schema:duration "3.40"^^xsd:float ;
 	schema:datePublished "1968-11-22"^^xsd:date ;
 	mo:genre "hard rock"^^xsd:string ;
 	dc:title "Helter Skelter"^^xsd:string ;
-	schema:lyricist <http://viaf.org/viaf/196844> , <http://viaf.org/viaf/100252012> ;
-	dc:isPartOf <http://viaf.org/viaf/174020212> ;
-	mo:producer <http://viaf.org/viaf/100987436> .
+	schema:lyricist <http://viaf.org/viaf/196844> , <http://viaf.org/viaf/100252012> ; # authority control for John Lennon and Paul McCartney
+	dc:isPartOf <http://viaf.org/viaf/174020212> ; # authority control for The White Album
+	mo:producer <http://viaf.org/viaf/100987436> . # authority control for George Martin
 
 <http://purl.org/cieLODrive/document/trial_transcription_photo> a dctype:Image ;
 	crm:P67_refers_to <http://purl.org/cieLODrive/event/Trial_A253156> ;
-	foaf:depicts <http://viaf.org/viaf/48788805> ;
-	crm:P54_has_current_permanent_location <https://sws.geonames.org/5368430/> ;
+	foaf:depicts <http://viaf.org/viaf/48788805> ; # authority control for Stephen Kay Conver
+	crm:P54_has_current_permanent_location <https://sws.geonames.org/5368430/> ; # authority control for LA Public Library
 	dc:type "image"^^xsd:string ;
 	dc:Identifier "00020629"^^xsd:string ;
 	schema:hasMeasurement "21x26cm"^^xsd:string ;
 	dc:hasFormat "jpg"^^xsd:string ;
 	dc:date "1971-01-19"^^xsd:date ;
-	schema:contributor <http://viaf.org/viaf/158902211> .
-
- <http://purl.org/cieLODrive/item/archival_photo> a fabio:StillImage ;
-	dc:creator <https://viaf.org/viaf/151544970/> ;
-	dc:title "Coroners with Sharon Tate's Body"^^xsd:string ;
-	photoshop:Source <https://viaf.org/viaf/240063952/> ;
-	photoshop:dateCreated "1969-08-09"^^xsd:date ;
-	dc:description "Coroner's office personnel wheel the body of film actress Sharon Tate from her home in Bel Air, California, August 9th after she and four others were found murdered. Homicide squads fanned out across Los Angeles August 11th attempting to tie together those slayings and the bizarre deaths of a married couple a dozen miles away."^^xsd:string .
+	schema:contributor <http://viaf.org/viaf/158902211> . # authority control for John Randolph Haynes and Dora Haynes Foundation
 
 <http://purl.org/cieLODrive/item/newspaper_article> a fabio:NewspaperArticle ;
-    dc:creator <http://viaf.org/viaf/98153737/> ;
-    dc:publisher <http://viaf.org/viaf/186133057/> ;
-    dc:coverage <http://purl.org/cieLODrive/place/California> ;
+	skos:broader fabio:NewspaperIssue ;
+    dc:creator <http://viaf.org/viaf/98153737/> ; # authority control for Steven V. Roberts
+    dc:publisher <http://viaf.org/viaf/186133057/> ; # authority control for The New York Times
+    dc:coverage <http://purl.org/cieLODrive/place/California> ; 
     schema:datePublished "1969-08-10"^^xsd:date ;
     dc:title "Actress Is Among 5 Slain At Home in Beverly Hills; Sharon Tate, 2d Woman and 3 Men Victims -Suspect Is Seized"^^xsd:string ;
     prism:pageRange "2"^^xsd:int .
-
-<http://purl.org/cieLODrive/archival_video/Manson_appears_in_court> a schema:video ;
-		rico:hasUnitOfMeasurement "48 seconds"^^xsd:string ;
-		rico:haspublisher "AP Newsroom Archive"^^xsd:string ;
-		rico:hasBeginningDate "1969-12-03"^^xsd:date ;
-		rico:isAssociatedwithDate "2008-10-27"^^xsd:date ;
-		rico:hasorHadTitle "Charles Manson appears in court for a preliminary hearing"^^xsd:string ;
-		rico:hasorHadIdentifier "z000016"^^xsd:string ;
-		crm:P67_refers_to <http://purl.org/cieLODrive/event/Trial_A253156> .
