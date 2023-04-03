@@ -6,14 +6,13 @@
 
     <meta name="DC.Title" content="CieLODrive">
     <meta name="DC.Creator" content="Erica Andreose">
-    <meta name="DC.Description" content="LODLAM project ">
+    <meta name="DC.Description" content="KODH project ">
     <meta name="DC.Publisher" content="Alma mater studiorum, Universita di Bologna, Digital Humanities and Digital Knowledge">
-    <meta name="DC.Contributor" content="Erica Andreose">
+    <meta name="DC.Contributor" content="Erica Andreose, Gaia Ortona, Francesco Alaimo, Alka Rana">
     <meta name="DC.Date" content="2023-03-27">
     <meta name="DC.Type" content="Website">
-    <meta name="DC.Format" content="HTML/CSS/JS">
-    <meta name="DC.Identifier" content="https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/"> <!--add website URL-->
-    <meta name="DC.Source" content="https://www.arthur-conan-doyle.com/index.php?title=Main_Page">
+    <meta name="DC.Format" content="HTML/CSS">
+    <meta name="DC.Identifier" content="https://ericaandreose.github.io/CieLODrive/"> <!--add website URL-->
     <meta name="DC.Language" content="eng">
 
     <!--CSS of Bootstrap-->
@@ -54,10 +53,10 @@
               Knowledge Organisation
               </a>
               <div id="nav" class="dropdown-menu text-white" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-white" href="#">Conceptual Map</a>
-                <a class="dropdown-item text-white" href="#">E/R Model</a>
-                <a class="dropdown-item text-white" href="#">E/R Model Enhance</a>
-                <a class="dropdown-item text-white" href="#">Conceptual Model</a>
+                <a class="dropdown-item text-white" href="#concmap">Conceptual Map</a>
+                <a class="dropdown-item text-white" href="#ermodel">E/R Model</a>
+                <a class="dropdown-item text-white" href="#enhance">E/R Model Enhanced</a>
+                <a class="dropdown-item text-white" href="#concmod">Conceptual Model</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -65,9 +64,9 @@
                 Knowledge Representation
               </a>
               <div id="nav" class="dropdown-menu text-white" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-white" href="#">CSV</a>
-                <a class="dropdown-item text-white" href="#">RDF production</a>
-                <a class="dropdown-item text-white" href="#">RDF visualization</a>
+                <a class="dropdown-item text-white" href="#csv">CSV</a>
+                <a class="dropdown-item text-white" href="#rdfp">RDF production</a>
+                <a class="dropdown-item text-white" href="#rdfv">RDF visualization</a>
               </div>
             </li>
           </ul>
@@ -78,7 +77,7 @@
     <section id="background">
       
         <div class="container-fluid" id="space">
-          <video src="immagini/vid.mov" autoplay muted loop style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0.4;"></video>
+          <video src="immagini/vid.mp4" autoplay muted loop style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0.4;"></video>
           <br>
           <br>
           <div class="row" style="position: relative; z-index: 10;">
@@ -618,11 +617,11 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
               <br>
-              <h1 class="titolo2">Knowledge Organisation</h1>
+              <h1 class="titolo2" id="ko">Knowledge Organisation</h1>
               <br>
               <h2 id="tit2">Conceptual Map</h2>
               <br>
-              <p style="color: white; text-align: justify;">The first step in the modeling process is to explain the event through a conceptual map: this map needs to represent explicitly the data extracted from the items and their relationships.
+              <p style="color: white; text-align: justify;" id="concmap">The first step in the modeling process is to explain the event through a conceptual map: this map needs to represent explicitly the data extracted from the items and their relationships.
                 We placed the crime event at the center of our graph, using it as a starting point for the study of the domain. We then connected the items from our collection to the Cielo Drive murders
                 and to the real metadata present on the objects cultural organizations records, highlighting the most important elements and concepts.                
               </p>
@@ -632,7 +631,7 @@
               <a href="immagini/1conceptmap.jpg" download>
                 <img class="graph" src="immagini/1conceptmap.jpg" alt="conceptual map" width="35%">
               </a>
-              <br>
+              <br id="ermodel">
               <h2 id="tit2">E/R Model</h2>
               <br>
               <p style="color: white; text-align: justify;">The following step is to translate the conceptual map into an entity-relationship model by abstracting from particular categories to more universal ones. The goal is to graphically represent our domain employing a more general perspective.
@@ -1669,7 +1668,7 @@
               <a href="immagini/theoreticalmodel.jpg" download>
                 <img class="graph" src="immagini/theoreticalmodel.jpg" alt="conceptual map" width="45%">
               </a>
-              <br>
+              <br id="enhance">
               <h2 id="tit2">E/R Model Enhanced</h2>
               <br>
               <p style="color: white; text-align: justify;">This theoretical model allowed us to enhance the previous version of the E/R model as shown below.
@@ -1697,7 +1696,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
               <br>
-              <h1 class="titolo2">Conceptual Model</h1>
+              <h1 class="titolo2" id="concmod">Conceptual Model</h1>
               <br>
               <p style="color: white; text-align: justify;">Having taken these steps, we moved from the enhanced version of the E/R model to the formal representation, namely the ontological approach. 
                 We created a conceptual model by employing existing schemas and vocabularies to formally describe our scenario in the most coherent way.
@@ -1753,9 +1752,9 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
               <br>
-              <h1 class="titolo2">Knowledge Representation</h1>
-              <br>
-              <h2 class="titolo2">CVS production</h2>
+              <h1 class="titolo2" id="kr">Knowledge Representation</h1>
+              <br id="csv">
+              <h2 id="tit2">CSV production</h2>
               <br>
               <p style="color: white; text-align: justify;">Once the modeling activity has been completed, we come back to the items in order to describe them on the basis of the conceptual model designed.
                 Each row of the following tables represent a statement about each item, while the columns represent the subject, predicate and object of each statement.
@@ -2348,7 +2347,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
               <br>
-              <h1 class="titolo2">RDF Production</h1>
+              <h1 class="titolo2" id="rdfp">RDF Production</h1>
               <br>
               <p style="color: white; text-align: justify;">The following step consists of writing the statements in RDF using the preferred serialization (in our case we used Turtle because of its readability). Before writing the statements, we made a list of all the prefixes we were going to use and we created our set of URIs that were helpful to identify the main entities of the domain. In addition to that, using owl:sameas we were able to link some elements of the project the authority records (such as VIAF and Geonames)
 
@@ -2357,8 +2356,12 @@
               <script src="https://gist.github.com/EricaAndreose/708a92cdc87bd48690381ec837dc4988.js"></script>
               <br>
 
-              <br>
+              <br id="rdfv">
               <h1 id="tit2">RDF Visualization</h1>
+              <br>
+              <a href="immagini/rdf-grapher.png" download>
+                <img class="graph" src="immagini/rdf-grapher.png" alt="conceptual map" width="85%">
+              </a>
               <br>
 
               
